@@ -40,6 +40,8 @@
 		5B0401ED833F46D7952A97FC /* libRNLocalNotifications.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AD8711344D41AFBD62ED6A /* libRNLocalNotifications.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		B901F161220E18B800A0EB4E /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = B901F15F220E18B800A0EB4E /* alarm.caf */; };
+		B901F162220E18B800A0EB4E /* silence.caf in Resources */ = {isa = PBXBuildFile; fileRef = B901F160220E18B800A0EB4E /* silence.caf */; };
 		B98838A2220E07E500457F97 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98838A1220E07E500457F97 /* HealthKit.framework */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
@@ -365,6 +367,8 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		B901F15F220E18B800A0EB4E /* alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = alarm.caf; path = "../../node_modules/react-native-local-notifications/ios/RNLocalNotifications/alarm.caf"; sourceTree = "<group>"; };
+		B901F160220E18B800A0EB4E /* silence.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = silence.caf; path = "../../node_modules/react-native-local-notifications/ios/RNLocalNotifications/silence.caf"; sourceTree = "<group>"; };
 		B98838A0220E07E500457F97 /* healthkittest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = healthkittest.entitlements; path = healthkittest/healthkittest.entitlements; sourceTree = "<group>"; };
 		B98838A1220E07E500457F97 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -610,6 +614,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				B901F15E220E188300A0EB4E /* Resources */,
 				13B07FAE1A68108700A75B9A /* healthkittest */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* healthkittestTests */,
@@ -640,6 +645,15 @@
 				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B901F15E220E188300A0EB4E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B901F15F220E18B800A0EB4E /* alarm.caf */,
+				B901F160220E18B800A0EB4E /* silence.caf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B9883868220E02BA00457F97 /* Recovered References */ = {
@@ -759,6 +773,9 @@
 						DevelopmentTeam = 6KABX57QDA;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -1143,6 +1160,8 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				B901F162220E18B800A0EB4E /* silence.caf in Resources */,
+				B901F161220E18B800A0EB4E /* alarm.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
